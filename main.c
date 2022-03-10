@@ -35,9 +35,6 @@ const struct timespec sdelay = {.tv_sec = 0, .tv_nsec = 400000};
 void gen_histogram(int *bins, int binsize, int *data, size_t len){
   //printf("Histogram on %d values\n",len);
   for (size_t i=0; i<len; i++){
-    if (data[i] == CREDIT_MAX_VAL){
-      printf("Here\n");
-    }
     int bin = data[i] / binsize;
     bins[bin]++;
     nanosleep(&qdelay,NULL);
