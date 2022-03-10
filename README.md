@@ -7,6 +7,14 @@ way. As a proof of concept it runs a second thread that uses
 a Flush+Reload attack to spy on the query and determine whether it
 is being run over one of two datasets.
 
+The Flush+Reload machinery is courtesy of Yuval Yarom's Mastik
+toolkit: https://github.com/0xADE1A1DE/Mastik
+
+At present we use a prebuilt version of the toolkit (for MacOS),
+unmodified, whose source you can obtain from the above repository.
+In future the plan is to have the `Makefile` here build that
+library from source.
+
 The dataset in question is the German Credit dataset from
 https://archive.ics.uci.edu/ml/datasets/statlog+(german+credit+data)
 
