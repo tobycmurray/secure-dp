@@ -1,13 +1,10 @@
-default: main-present main-absent
+default: main
 
 .PHONY: default clean
 
-main-present: main.c
-	$(CC) -DPRESENT $< -o $@ -lmastik -L.
-
-main-absent: main.c
+main: main.c
 	$(CC) $< -o $@ -lmastik -L.
 
 
 clean:
-	rm -f main-present main-absent
+	rm -f main
